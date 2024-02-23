@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1 JS</title>
+</head>
+<body>
+    
+        <script>
+            
+         
+            var mayornota = 0, menornota = 0, actualyear = 2023, actualday = 24, actualmonth = 9;
+            var nota = 0.0, suma = 0, promedio = 0, edad = 0, mayoria = "", limit = 1900;
+            var notaalta,notabaja;
+
+            Number(notaalta), Number(notabaja);
+            
+
+            parseFloat(suma);
+          
+    
+            alert("Calculadora de notas");
+
+            var name = prompt("Ingrese su nombre");
+
+            var secondname = prompt("Ingrese su apellido");
+
+            var day = parseInt(prompt("FECHA DE NACIMIENTO. Ingrese el dia"));
+            while(day > 31 || day <= 0){
+                day = parseInt(("Error, ingrese de nuevo"));
+            }
+            var month = parseInt(prompt("FECHA DE NACIMIENTO. Ingrese el mes"));
+            while(month > 12 || month <= 0){
+                month = parseInt(prompt("Error, ingrese de nuevo"));
+            }
+            var year = parseInt(prompt("FECHA DE NACIMIENTO. Ingrese el año"));
+            while(year <= limit){
+                year = parseInt(prompt("Error, ingrese de nuevo"));
+            }
+    
+            var cantidad = parseInt(prompt("Cuantas notas desea ingresar?"));
+
+            var notaalta, notabaja;
+
+            for(var i = 0; i<cantidad; i++){
+
+               var nota = parseFloat(prompt("Ingrese la nota N " + (i+1)));
+
+               while(nota > 20 || nota < 1){
+                    
+                   nota = parseFloat(prompt("Nota invalida, ingrese de nuevo la nota N " + (i+1)));
+               }
+
+               suma += nota;
+
+               
+               
+
+               if(i == 0){
+                
+               notaalta = nota;
+               notabaja = nota;
+
+
+               }else if (i != 0){
+                    if(nota > notaalta){
+                        notaalta = nota;
+                    }else if(nota < notabaja){
+                        notabaja = nota;
+                    }
+               }
+               promedio = suma / cantidad;
+            }
+             
+         
+             if (year <= actualyear){
+		        edad = actualyear - year;   
+			 }
+
+				if(month > actualmonth){
+					edad = edad - 1;
+				}else if(actualmonth == month){
+						if(day > actualday){
+							edad = edad - 1;
+						}
+					
+					}
+
+                    if (edad >= 18 && edad <= 120){
+		        	mayoria = "mayor de edad ";
+			      }else if(edad <= 17 && edad >= 0){
+			        mayoria = "menor de edad ";
+			      }
+          
+                  console.log("El estudiante " + name + " " + secondname + " tiene: "+ edad + " años, y es " + mayoria)
+                  console.log("Su promedio es de: " + promedio)
+
+                  if(cantidad == 0){
+                    console.log("Su nota es: " + notaalta)
+                  }else if(cantidad != 0){
+                    if(notaalta == notabaja){
+                        console.log("la nota mas alta y mas baja son iguales, su nota es: " + notaalta);
+                    }else{
+                        console.log(" Su nota mas alta fue: " + notaalta + " Y su nota mas baja fue: " + notabaja);
+                    }
+                   
+                  }
+                  
+        </script>
+
+</body>
+</html>

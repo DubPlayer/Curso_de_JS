@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./style/pokemon.css" />
+<body onload="verpokemon()">
+   
+ 
+  <div id="todos">
+    <div class="pokemon-todos" id="listaPokemon">
+        <div class="pokemon">
+           <p class="pokemon-id-back"></p>
+               <div class="pokemon-imagen">
+                   <img id="front"
+                    alt="front"></img>
+                    <img id= "back"
+                    alt="back"></img>
+               </div>
+               <div class="pokemon-info">
+                   <div class="nombre-contenedor">
+                       <p class="pokemonid" id="idmostrar"></p>
+                       <h2 class="pokemon-nombre" id="nombremostrar"></h2>
+                   </div>
+                        <div class="pokemon-info">
+                            <p class="tipo" id="type1"></p>
+                            <p class="tipo" id="type2"></p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat" id="stat1">4m</p>
+                            <p class="stat" id="stat2">5kg</p>
+                        </div>
+
+                       
+                    </div>
+
+                    
+          
+        </div>
+    </div>
+    <div class="pokemon-moves-abilites">
+        <p class= "moves" id="move1"></p>
+    </div>
+    <div class="pokemon-moves-abilites">
+        <p class= "abilities2" id="abilities"></p>
+    </div>
+
+   </div>
+   
+       <script src="./script/pokemon.js"></script>
+       <script src="./script/lib/axios.min.js"></script>
+
+</html>

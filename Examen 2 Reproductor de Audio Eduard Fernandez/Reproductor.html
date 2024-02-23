@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reproductor de audio</title>
+    <link rel="stylesheet" href="./design/style.css" />
+    <script src="https://kit.fontawesome.com/dcdf1bb8bd.js" crossorigin="anonymous"></script>
+  </head>
+  <body onload="logs(),setVolume()">
+ 
+    <div  class="container">
+          <div class="music-player">
+            
+                <nav>
+                  <div class="circle">
+                    <img id="songplaying" class="song-img"></img>
+                    <h1 id="title">Dare I Care</h1>
+                    <p id="singer"> The Voidz + Julian Casablancas </p>
+                    <p id="Daterelease"> 10/23/2014 </p>
+          
+                  </div>
+
+                  <audio id =mainplayer>
+                
+                  </audio>
+                  <p> Volumen </p>
+                  <input type="range" min="0" max="100" value="50" id="volumeSlider">
+                  
+                  <input type="range" value="0" id="progress"> </input>
+                  <div class="controls">
+                    <div><i class="fa-solid fa-backward"id="previous"></i></div>
+                    <div><i class="fa-solid fa-play" id="toggle"></i></div>
+                    <div><i class="fa-solid fa-forward"id="next"></i></div>
+                    <div><i class="fa-solid fa-repeat"id="repetir"></i></div>
+                  </div>
+           
+                </nav>
+                <div class="comment-box">
+             
+                  <body>
+
+                    <button onclick="publish()">Publish</button>
+                    
+                  </body>
+                  <form id="commentForm">
+                    Name: <input type="text" id="name">
+                    <br>
+                    Comment: <input type="text" id="comment">
+                   </form>
+                   <p id="result"></p>
+               
+            
+                 </div>
+               
+          
+          </div> 
+  
+    </div>
+    
+
+   
+	<script src="./Script/Script.js"></script>
+  </body>
+</html>
